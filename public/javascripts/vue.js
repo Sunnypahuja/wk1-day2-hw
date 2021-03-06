@@ -6,12 +6,12 @@ Vue.component("comments", {
     template: "<h2 class='m-5 ps-4'>Comments</h2>",
 });
 Vue.component("titleimage", {
-    template: '<img src="../images/chili.jpg" alt="White Chicken Chili" />',
+    template: '<img src="images/chili.jpg" alt="White Chicken Chili" />',
 });
 const app = new Vue({
     el: "#container",
     data: {
-      filelocation: "../images/profile.png",
+      filelocation: "images/profile.png",
       showmodal: false,
       comments: [
         {
@@ -66,9 +66,9 @@ const app = new Vue({
     methods: {
       openmodal: function (userName) {
         const { level, bio } = this.users[userName];
-        this.htmlcontent = `<h1 style="text-transform: uppercase">${userName}</h1>`;
-        this.htmlcontent1 = `<div style="font-size: 1.2em; margin: 2rem; margin-left: 0"><b>Foodie Level</b>: ${level}</div>`;
-        this.htmlcontent2 = `<div style="font-size: 1.2em; margin: 2rem; margin-left: 0"><b>Bio</b>: ${bio}</div>`;
+        this.htmlcontent = `<h1 style="text-transform: uppercase">${userName}</h1>
+        <div style="font-size: 1.2em; margin: 2rem; margin-left: 0"><b>Foodie Level</b>: ${level}</div>
+        <div style="font-size: 1.2em; margin: 2rem; margin-left: 0"><b>Bio</b>: ${bio}</div>`;
         this.togglemodal();
       },
       togglemodal: function () {
